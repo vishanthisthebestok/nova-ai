@@ -1,8 +1,9 @@
 {
-  "name": "base44-app",
+  "name": "synaptix",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "Synaptix - AI that thinks with you. Your neural workspace.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -29,6 +29,9 @@ export default {
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
         "shine": "shine 0.9s ease",
         "shimmer": "shimmer 1.4s infinite",
+        "gradient": "gradient 3s ease infinite",
+        "ping": "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
+        "slow-float": "slow-float 6s ease-in-out infinite",
       },
       keyframes: {
         "fade-up": {
@@ -49,6 +52,18 @@ export default {
         },
         "shimmer": {
           "100%": { transform: "translateX(100%)" },
+        },
+        "gradient": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        "ping": {
+          "75%, 100%": { transform: "scale(2)", opacity: "0" },
+        },
+        "slow-float": {
+          "0%, 100%": { transform: "translateY(0) translateX(0)" },
+          "33%": { transform: "translateY(-20px) translateX(10px)" },
+          "66%": { transform: "translateY(10px) translateX(-10px)" },
         },
       },
     },
