@@ -1,5 +1,5 @@
 import { useAuth } from '@/lib/AuthContext';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 
 export default function ProtectedRoute({ children, unauthenticatedElement }) {
   const { user, isLoadingAuth } = useAuth();
@@ -16,5 +16,6 @@ export default function ProtectedRoute({ children, unauthenticatedElement }) {
     return unauthenticatedElement || <Navigate to="/login" replace />;
   }
 
-  return children;
+  // When used as a layout route wrapper (no children prop), render Outlet for nested routes
+  return children ?? <Outlet />;
 }

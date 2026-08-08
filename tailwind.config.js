@@ -12,6 +12,12 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        electric: {
+          blue: "#00f0ff",
+          cyan: "#06b6d4",
+          navy: "#0a0f1c",
+          dark: "#000000",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -32,6 +38,7 @@ export default {
         "gradient": "gradient 3s ease infinite",
         "ping": "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
         "slow-float": "slow-float 6s ease-in-out infinite",
+        "particle-float": "particle-float 20s linear infinite",
       },
       keyframes: {
         "fade-up": {
@@ -64,6 +71,12 @@ export default {
           "0%, 100%": { transform: "translateY(0) translateX(0)" },
           "33%": { transform: "translateY(-20px) translateX(10px)" },
           "66%": { transform: "translateY(10px) translateX(-10px)" },
+        },
+        "particle-float": {
+          "0%": { transform: "translateY(100vh) scale(0)", opacity: "0" },
+          "10%": { opacity: "1" },
+          "90%": { opacity: "1" },
+          "100%": { transform: "translateY(-100vh) scale(1)", opacity: "0" },
         },
       },
     },

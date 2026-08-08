@@ -24,6 +24,7 @@ import Projects from '@/pages/Projects';
 import Files from '@/pages/Files';
 import Extensions from '@/pages/Extensions';
 import Download from '@/pages/Download';
+import Studio from '@/pages/Studio';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -56,10 +57,11 @@ const AuthenticatedApp = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password" element={<ResetPassword />} />
+      <Route path="/studio" element={<Studio />} />
       <Route path="/" element={<Landing />} />
+      <Route path="/dashboard" element={<Home />} />
       <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
         <Route element={<AppLayout />}>
-          <Route path="/dashboard" element={<Home />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/chat/:id" element={<Chat />} />
           <Route path="/search" element={<SearchPage />} />
